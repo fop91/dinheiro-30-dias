@@ -1,145 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dinheiro em 30 Dias — Método Prático para Sair das Dívidas de Vez</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID_AQUI');
-    fbq('track', 'PageView');
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .gradient-text { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .cta-btn { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); transition: all 0.3s ease; box-shadow: 0 0 30px rgba(34,197,94,0.4); }
-    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 0 50px rgba(34,197,94,0.6); }
-    .pulse { animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.6} }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dinheiro em 30 Dias — Método Simples para Renda Extra</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@keyframes shake{0%,100%{transform:translateX(0)}10%,30%,50%,70%,90%{transform:translateX(-4px)}20%,40%,60%,80%{transform:translateX(4px)}}
+@keyframes flash{0%,100%{background:#dc2626}50%{background:#ca8a04}}
+.shake{animation:shake 0.8s ease-in-out infinite}
+.flash{animation:flash 1s ease-in-out infinite}
+.sbar{position:fixed;bottom:0;left:0;right:0;z-index:100;background:#111827;border-top:2px solid rgba(16,185,129,.5);padding:10px 16px}
+</style>
 </head>
-<body class="bg-gray-950 text-white">
-  <div class="bg-green-700 text-white text-center py-3 px-4">
-    <p class="text-sm font-bold">💰 OFERTA DE LANÇAMENTO — R$ 37 (normal: R$ 97) — Encerra em: <span id="countdown-top" class="font-mono text-yellow-300 font-black">00:00:00</span></p>
+<body class="bg-gray-950 text-white font-sans pb-24">
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','SEU_PIXEL_ID_AQUI');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/></noscript>
+
+<div id="topbar" class="flash text-white text-center py-2 px-4">
+  <p class="text-sm font-black">&#9200; OFERTA ESPECIAL EXPIRA EM: <span id="ct1" class="font-mono">10:00</span> &mdash; DEPOIS O PRECO SOBE!</p>
+</div>
+
+<div class="max-w-lg mx-auto px-4 pt-6 pb-4">
+  <p class="text-center text-xs uppercase tracking-widest text-emerald-400 font-bold mb-2">METODO VALIDADO POR +2.000 PESSOAS</p>
+  <h1 class="text-3xl font-black text-center leading-tight mb-2">
+    Como Ganhar Seus Primeiros <span class="text-emerald-400">R$1.000 Extra</span> Nos Proximos <span class="text-yellow-400">30 Dias</span> &mdash; Mesmo Sem Experiencia
+  </h1>
+  <p class="text-center text-gray-400 text-sm mb-4">O guia passo a passo que ninguem te deu &mdash; usando apenas o celular que voce ja tem</p>
+
+  <div class="flex items-center justify-center gap-4 mb-6 text-xs">
+    <span class="text-emerald-400 font-bold">&#9679; <span id="vw">32</span> pessoas vendo agora</span>
+    <span class="text-gray-600">|</span>
+    <span class="text-gray-400">64 compraram hoje</span>
   </div>
-  <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-    <div class="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-2 mb-8">
-      <span class="w-2 h-2 bg-green-400 rounded-full pulse"></span>
-      <span class="text-green-400 text-sm font-semibold">O método que já tirou +1.800 brasileiros das dívidas</span>
-    </div>
-    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-      Você Ganha Dinheiro —<br>Mas Ele Nunca Sobra.<br>
-      Isso Vai Mudar em <span class="gradient-text">30 Dias.</span>
-    </h1>
-    <p class="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
-      O <strong class="text-white">método prático passo a passo</strong> para quitar dívidas, criar reserva de emergência e fazer seu dinheiro trabalhar por você — independente do salário que você ganha hoje.
-    </p>
-    <div class="flex flex-wrap items-center justify-center gap-4 mb-10 text-sm text-gray-400">
-      <span>⭐⭐⭐⭐⭐ +1.800 alunos</span>
-      <span class="hidden md:inline">|</span>
-      <span>🏆 Resultado em 30 dias</span>
-      <span class="hidden md:inline">|</span>
-      <span>🛡️ 7 dias de garantia total</span>
-    </div>
-    <a href="https://pay.kiwify.com.br/TVqS0X5" onclick="fbq('track','InitiateCheckout',{value:37,currency:'BRL'})" class="cta-btn inline-block text-white font-black text-xl px-10 py-5 rounded-2xl mb-4 no-underline">
-      💰 QUERO MEU DINHEIRO DE VOLTA — R$ 37
-    </a>
-    <p class="text-gray-500 text-sm">🔒 Pix, Cartão ou Boleto · 7 dias de garantia · Acesso imediato</p>
-  </section>
-  <section class="bg-gray-900/70 py-16">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-3xl font-black text-center mb-4">Você se identifica com <span class="gradient-text">alguma dessas situações?</span></h2>
-      <p class="text-gray-400 text-center mb-10">Se marcou 3 ou mais — você precisa de método, não de mais força de vontade.</p>
-      <div class="space-y-3">
-        <div class="flex items-start gap-3 bg-gray-900 border border-red-500/20 rounded-xl p-4"><span class="text-red-400 text-xl shrink-0 mt-0.5">✗</span><p class="text-gray-300">O mês acaba antes do salário — você sabe que entra dinheiro, mas nunca sobra nada no final</p></div>
-        <div class="flex items-start gap-3 bg-gray-900 border border-red-500/20 rounded-xl p-4"><span class="text-red-400 text-xl shrink-0 mt-0.5">✗</span><p class="text-gray-300">Você tem dívidas que parecem impossíveis de quitar — cartão, cheque especial, empréstimo — e paga só o mínimo</p></div>
-        <div class="flex items-start gap-3 bg-gray-900 border border-red-500/20 rounded-xl p-4"><span class="text-red-400 text-xl shrink-0 mt-0.5">✗</span><p class="text-gray-300">Quando aparece qualquer emergência — carro, saúde, imprevistos — você não tem reserva e precisa pegar emprestado</p></div>
-        <div class="flex items-start gap-3 bg-gray-900 border border-red-500/20 rounded-xl p-4"><span class="text-red-400 text-xl shrink-0 mt-0.5">✗</span><p class="text-gray-300">Você ganhou mais nos últimos anos mas continua com os mesmos problemas — o padrão de gasto cresce junto com a renda</p></div>
-        <div class="flex items-start gap-3 bg-gray-900 border border-red-500/20 rounded-xl p-4"><span class="text-red-400 text-xl shrink-0 mt-0.5">✗</span><p class="text-gray-300">Você tenta controlar as finanças mas desiste depois de alguns dias porque parece complicado ou frustrante demais</p></div>
-      </div>
-      <div class="mt-8 bg-green-500/10 border border-green-500/30 rounded-xl p-6 text-center">
-        <p class="text-green-300 font-semibold">O problema não é o quanto você ganha. <strong class="text-white">É que ninguém te ensinou a administrar o que entra.</strong></p>
-        <p class="text-gray-400 mt-2 text-sm">Com o método certo, qualquer pessoa consegue sair das dívidas e criar reserva — independente do salário.</p>
+
+  <div class="flex justify-center mb-6">
+    <div style="display:inline-block;transform:perspective(600px) rotateY(-18deg) rotateX(5deg);filter:drop-shadow(25px 25px 35px rgba(0,0,0,.7))">
+      <div style="width:170px;height:230px;background:linear-gradient(150deg,#34d399,#059669,#064e3b);border-radius:3px 10px 10px 3px;position:relative;overflow:hidden;box-shadow:inset -3px 0 8px rgba(0,0,0,.3)">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:20px;background:rgba(0,0,0,.35)"></div>
+        <div style="position:absolute;top:0;left:20px;right:0;height:35%;background:linear-gradient(180deg,rgba(255,255,255,.15),transparent)"></div>
+        <div style="position:absolute;top:12px;left:28px;right:8px;text-align:center">
+          <div style="font-size:7px;color:rgba(255,255,255,.7);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">METODO EXCLUSIVO</div>
+          <div style="font-size:18px;font-weight:900;color:#fff;line-height:1.1;text-shadow:0 2px 8px rgba(0,0,0,.5)">DINHEIRO<br>EM<br>30 DIAS</div>
+          <div style="margin-top:8px;height:2px;background:rgba(255,255,255,.4);border-radius:1px"></div>
+          <div style="margin-top:6px;font-size:7px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px">Renda Extra Garantida</div>
+        </div>
+        <div style="position:absolute;bottom:12px;left:28px;right:8px;text-align:center">
+          <div style="font-size:7px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:1px">Edicao Completa</div>
+        </div>
       </div>
     </div>
-  </section>
-  <section class="py-16">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-3xl font-black text-center mb-4">O que você vai <span class="gradient-text">aprender e aplicar</span></h2>
-      <p class="text-gray-400 text-center mb-10">Método prático, sem jargão financeiro — só ação concreta e resultado em 30 dias</p>
-      <div class="space-y-4">
-        <div class="flex items-start gap-4 bg-gray-900 rounded-xl p-5 border border-gray-800"><span class="text-2xl shrink-0">🔍</span><div><strong>O diagnóstico financeiro de 10 minutos</strong><p class="text-gray-400 text-sm mt-1">Descubra exatamente onde seu dinheiro vai embora — e pare o vazamento hoje mesmo, sem precisar de planilha complexa.</p></div></div>
-        <div class="flex items-start gap-4 bg-gray-900 rounded-xl p-5 border border-gray-800"><span class="text-2xl shrink-0">⛄</span><div><strong>O método da bola de neve para quitar dívidas</strong><p class="text-gray-400 text-sm mt-1">Estratégia validada para liquidar débitos do menor para o maior — com sensação de progresso a cada mês, sem sofrimento.</p></div></div>
-        <div class="flex items-start gap-4 bg-gray-900 rounded-xl p-5 border border-gray-800"><span class="text-2xl shrink-0">🏦</span><div><strong>Como criar reserva de emergência em qualquer salário</strong><p class="text-gray-400 text-sm mt-1">Mesmo ganhando R$1.500/mês é possível começar. O segredo não é ganhar mais — é estruturar o que já entra.</p></div></div>
-        <div class="flex items-start gap-4 bg-gray-900 rounded-xl p-5 border border-gray-800"><span class="text-2xl shrink-0">📈</span><div><strong>Os 3 investimentos para iniciantes que rendem mais que a poupança</strong><p class="text-gray-400 text-sm mt-1">Simples, seguros e acessíveis a partir de R$1. Você não precisa entender o mercado financeiro para começar.</p></div></div>
-        <div class="flex items-start gap-4 bg-gray-900 rounded-xl p-5 border border-gray-800"><span class="text-2xl shrink-0">📊</span><div><strong>Planilha de controle financeiro já preenchida</strong><p class="text-gray-400 text-sm mt-1">Basta inserir seus dados e o plano se monta automaticamente. Sem precisar criar nada do zero — já está pronto para usar.</p></div></div>
+  </div>
+
+  <div class="bg-gray-900 rounded-xl p-3 mb-5 border border-gray-800">
+    <div class="flex justify-between text-xs mb-1">
+      <span class="text-yellow-400 font-bold">&#128293; Vagas com desconto</span>
+      <span class="text-red-400 font-bold">Apenas 11 restantes</span>
+    </div>
+    <div class="w-full bg-gray-800 rounded-full h-3">
+      <div class="h-3 rounded-full bg-gradient-to-r from-yellow-500 to-red-500" style="width:89%"></div>
+    </div>
+    <p class="text-xs text-gray-500 mt-1 text-center">89% das vagas preenchidas</p>
+  </div>
+
+  <a href="https://pay.kiwify.com.br/TVqS0X5" class="shake block w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black py-4 px-6 rounded-2xl text-lg text-center uppercase tracking-wide mb-3">
+    QUERO GANHAR DINHEIRO EM 30 DIAS &rarr;
+  </a>
+  <p class="text-center text-xs text-gray-500 mb-6">&#128274; Pagamento seguro &middot; Acesso imediato &middot; Garantia 7 dias</p>
+
+  <div class="bg-gray-900 border border-red-900 rounded-xl p-4 mb-6 text-center">
+    <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Preco especial acaba em</p>
+    <p class="text-4xl font-black text-red-400 font-mono" id="ct2">10:00</p>
+    <p class="text-xs text-gray-500 mt-1">Depois volta para R$97</p>
+  </div>
+
+  <div class="mb-8">
+    <h2 class="text-xl font-black text-center mb-4">Voce se identifica com alguma dessas situacoes?</h2>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3 bg-gray-900 p-3 rounded-xl border border-gray-800">
+        <span class="text-2xl">&#128560;</span>
+        <p class="text-sm text-gray-300">O salario acaba antes do mes terminar e voce nao sabe como pagar as contas</p>
+      </div>
+      <div class="flex items-start gap-3 bg-gray-900 p-3 rounded-xl border border-gray-800">
+        <span class="text-2xl">&#128548;</span>
+        <p class="text-sm text-gray-300">Voce quer ganhar uma renda extra mas nao sabe por onde comecar</p>
+      </div>
+      <div class="flex items-start gap-3 bg-gray-900 p-3 rounded-xl border border-gray-800">
+        <span class="text-2xl">&#128531;</span>
+        <p class="text-sm text-gray-300">Ja tentou varias coisas na internet que nao funcionaram e perdeu a esperanca</p>
+      </div>
+      <div class="flex items-start gap-3 bg-gray-900 p-3 rounded-xl border border-gray-800">
+        <span class="text-2xl">&#128546;</span>
+        <p class="text-sm text-gray-300">Precisa de dinheiro urgente mas nao tem capital para investir em nada</p>
       </div>
     </div>
-  </section>
-  <section class="bg-gray-900/50 py-16">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-black text-center mb-2">O que nossos alunos <span class="gradient-text">conquistaram</span></h2>
-      <p class="text-gray-400 text-center mb-10">Resultados reais de quem aplicou o método</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-900 border border-green-500/20 rounded-xl p-6"><div class="text-yellow-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div><p class="text-gray-300 text-sm mb-4">"Quitei R$12.000 em dívidas em 6 meses usando o método da bola de neve. Antes achava impossível. O diagnóstico de 10 minutos me mostrou onde eu estava desperdiçando dinheiro sem perceber."</p><div class="flex items-center gap-3"><div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center font-black text-sm shrink-0">SP</div><div><p class="font-semibold text-sm">Sandra P.</p><p class="text-gray-500 text-xs">Brasília, DF</p></div></div></div>
-        <div class="bg-gray-900 border border-green-500/20 rounded-xl p-6"><div class="text-yellow-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div><p class="text-gray-300 text-sm mb-4">"Finalmente consigo guardar dinheiro todo mês. Não porque ganhei mais — ainda ganho o mesmo. A diferença foi ter um método. Em 30 dias já tinha uma reserva de R$800."</p><div class="flex items-center gap-3"><div class="w-10 h-10 bg-emerald-700 rounded-full flex items-center justify-center font-black text-sm shrink-0">LB</div><div><p class="font-semibold text-sm">Lucas B.</p><p class="text-gray-500 text-xs">Campinas, SP</p></div></div></div>
-        <div class="bg-gray-900 border border-green-500/20 rounded-xl p-6"><div class="text-yellow-400 mb-3 text-sm">⭐⭐⭐⭐⭐</div><p class="text-gray-300 text-sm mb-4">"Em 30 dias tinha uma reserva de emergência pela primeira vez na minha vida. 34 anos sem nunca ter guardado dinheiro. A planilha que vem pronta foi o que fez a diferença — fácil demais de usar."</p><div class="flex items-center gap-3"><div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center font-black text-sm shrink-0">CR</div><div><p class="font-semibold text-sm">Camila R.</p><p class="text-gray-500 text-xs">Salvador, BA</p></div></div></div>
+    <p class="text-center text-emerald-400 font-bold mt-4 text-sm">Se voce respondeu SIM para alguma dessas, este guia foi feito pra voce.</p>
+  </div>
+
+  <div class="mb-8">
+    <h2 class="text-xl font-black text-center mb-4">O que voce vai descobrir dentro do guia:</h2>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3">
+        <span class="text-emerald-400 font-black text-xl mt-0.5">&#10003;</span>
+        <p class="text-sm text-gray-300"><strong class="text-white">O metodo dos R$1.000 em 30 dias</strong> &mdash; o caminho mais curto para renda extra usando so o celular</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-emerald-400 font-black text-xl mt-0.5">&#10003;</span>
+        <p class="text-sm text-gray-300"><strong class="text-white">7 formas de ganhar dinheiro hoje</strong> &mdash; sem precisar de investimento inicial, experiencia ou diploma</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-emerald-400 font-black text-xl mt-0.5">&#10003;</span>
+        <p class="text-sm text-gray-300"><strong class="text-white">O plano dia a dia</strong> &mdash; exatamente o que fazer do dia 1 ao dia 30 para chegar no resultado</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-emerald-400 font-black text-xl mt-0.5">&#10003;</span>
+        <p class="text-sm text-gray-300"><strong class="text-white">Como nao depender do chefe</strong> &mdash; construindo sua renda paralela enquanto ainda tem emprego</p>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-emerald-400 font-black text-xl mt-0.5">&#10003;</span>
+        <p class="text-sm text-gray-300"><strong class="text-white">Os erros que travam o lucro</strong> &mdash; o que 90% das pessoas fazem errado e como voce vai evitar</p>
       </div>
     </div>
-  </section>
-  <section class="max-w-2xl mx-auto px-6 py-8">
-    <div class="bg-gray-900 border border-green-500/40 rounded-2xl p-8 text-center">
-      <p class="text-gray-400 text-sm mb-2">⏱️ Oferta especial de lançamento — encerra em:</p>
-      <div class="bg-green-500/15 border border-green-500/30 rounded-xl px-6 py-3 inline-block mb-6">
-        <span id="countdown-box" class="font-mono font-black text-3xl text-green-300">00:00:00</span>
-      </div>
-      <div class="mb-6">
-        <span class="text-gray-500 line-through text-xl">R$ 97</span>
-        <div class="text-6xl font-black gradient-text">R$ 37</div>
-        <p class="text-gray-400 text-sm mt-1">pagamento único · acesso vitalício · PDF + planilha de controle</p>
-      </div>
-      <a href="https://pay.kiwify.com.br/TVqS0X5" onclick="fbq('track','InitiateCheckout',{value:37,currency:'BRL'})" class="cta-btn block text-white font-black text-2xl px-10 py-6 rounded-2xl mb-4 no-underline">
-        💰 QUERO DINHEIRO EM 30 DIAS — R$ 37
-      </a>
-      <div class="flex items-center justify-center gap-6 text-gray-500 text-xs">
-        <span>🔒 Pagamento seguro</span><span>🛡️ 7 dias de garantia</span><span>⚡ Acesso imediato</span>
-      </div>
-    </div>
-  </section>
-  <section class="max-w-3xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-black text-center mb-10">Perguntas <span class="gradient-text">frequentes</span></h2>
+  </div>
+
+  <div class="mb-8">
+    <h2 class="text-xl font-black text-center mb-4">Quem ja aplicou o metodo diz:</h2>
     <div class="space-y-4">
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-5"><h3 class="font-bold mb-2">Como vou acessar o material depois de comprar?</h3><p class="text-gray-400 text-sm">Imediatamente após o pagamento você recebe um e-mail com o link de acesso. O material fica disponível para sempre na sua área do aluno.</p></div>
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-5"><h3 class="font-bold mb-2">Funciona para quem ganha pouco — tipo R$1.500 ou R$2.000?</h3><p class="text-gray-400 text-sm">Sim. O método foi desenvolvido especialmente para quem não tem sobra. O diagnóstico mostra onde estão os vazamentos.</p></div>
-      <div class="bg-gray-900 border border-gray-800 rounded-xl p-5"><h3 class="font-bold mb-2">E se eu não gostar? Como funciona a garantia?</h3><p class="text-gray-400 text-sm">Você tem 7 dias para avaliar o material. Se por qualquer motivo não gostar, é só mandar um e-mail e devolvemos 100% do valor. Sem perguntas, sem burocracia.</p></div>
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-full bg-emerald-900 flex items-center justify-center font-black text-emerald-300 text-lg">M</div>
+          <div>
+            <p class="font-bold text-sm">Marcos T.</p>
+            <p class="text-xs text-gray-500">Sao Paulo &mdash; SP</p>
+          </div>
+          <div class="ml-auto text-yellow-400 text-xs font-bold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <p class="text-sm text-gray-300">"Nos primeiros 15 dias ja tinha feito R$680. No final do mes fechei em R$1.340. Nunca pensei que fosse tao simples."</p>
+      </div>
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-full bg-emerald-900 flex items-center justify-center font-black text-emerald-300 text-lg">A</div>
+          <div>
+            <p class="font-bold text-sm">Ana L.</p>
+            <p class="text-xs text-gray-500">Curitiba &mdash; PR</p>
+          </div>
+          <div class="ml-auto text-yellow-400 text-xs font-bold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <p class="text-sm text-gray-300">"Sou dona de casa, nunca trabalhei fora. Aprendi o metodo e hoje faco R$1.200 por mes trabalhando 2h por dia."</p>
+      </div>
+      <div class="bg-gray-900 rounded-xl p-4 border border-gray-800">
+        <div class="flex items-center gap-3 mb-2">
+          <div class="w-10 h-10 rounded-full bg-emerald-900 flex items-center justify-center font-black text-emerald-300 text-lg">R</div>
+          <div>
+            <p class="font-bold text-sm">Ricardo F.</p>
+            <p class="text-xs text-gray-500">Belo Horizonte &mdash; MG</p>
+          </div>
+          <div class="ml-auto text-yellow-400 text-xs font-bold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        </div>
+        <p class="text-sm text-gray-300">"Estava devendo R$8.000. Com o metodo quitei tudo em 4 meses. Hoje tenho reserva de emergencia e sobra dinheiro."</p>
+      </div>
     </div>
-  </section>
-  <section class="max-w-2xl mx-auto px-6 pb-16 text-center">
-    <a href="https://pay.kiwify.com.br/TVqS0X5" onclick="fbq('track','InitiateCheckout',{value:37,currency:'BRL'})" class="cta-btn inline-block text-white font-black text-xl px-10 py-5 rounded-2xl mb-4 no-underline">
-      💰 QUERO DINHEIRO EM 30 DIAS — R$ 37
+  </div>
+
+  <div class="bg-gray-900 rounded-2xl p-5 mb-6 border border-emerald-900">
+    <p class="text-center text-xs uppercase tracking-widest text-emerald-400 font-bold mb-3">BONUS EXCLUSIVOS (so hoje)</p>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">&#127873;</span>
+        <div>
+          <p class="font-bold text-sm">Planilha de Controle Financeiro</p>
+          <p class="text-xs text-gray-400">Organize suas receitas e gastos automaticamente. Valor: R$27 &mdash; GRATIS para voce</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="text-2xl">&#127873;</span>
+        <div>
+          <p class="font-bold text-sm">Guia de Primeiros Passos Online</p>
+          <p class="text-xs text-gray-400">Do zero ao primeiro real na internet. Valor: R$37 &mdash; GRATIS para voce</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-900 rounded-2xl p-6 mb-4 border border-emerald-800 text-center">
+    <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">INVESTIMENTO</p>
+    <p class="text-gray-500 line-through text-lg">De R$97,00</p>
+    <p class="text-5xl font-black text-emerald-400 my-1">R$37</p>
+    <p class="text-xs text-gray-400 mb-4">Pagamento unico &middot; Acesso vitalicio</p>
+    <a href="https://pay.kiwify.com.br/TVqS0X5" class="shake block w-full bg-emerald-500 hover:bg-emerald-400 text-black font-black py-4 px-6 rounded-2xl text-lg uppercase tracking-wide mb-3">
+      QUERO MEU GUIA AGORA &rarr;
     </a>
-    <p class="text-gray-500 text-sm">🛡️ Garantia de 7 dias — devolução 100% sem perguntas · Acesso imediato</p>
-  </section>
-  <footer class="border-t border-gray-800 py-8 text-center text-gray-600 text-sm">
-    <p>© 2026 Dinheiro em 30 Dias · Todos os direitos reservados</p>
-  </footer>
-  <script>
-    (function() {
-      var key = 'd30_end';
-      var end = parseInt(localStorage.getItem(key) || '0');
-      if (!end || end < Date.now()) { end = Date.now() + 48 * 3600000; localStorage.setItem(key, end); }
-      function fmt(n) { return String(n).padStart(2, '0'); }
-      function tick() {
-        var d = Math.max(0, end - Date.now());
-        var h = Math.floor(d / 3600000); var m = Math.floor((d % 3600000) / 60000); var s = Math.floor((d % 60000) / 1000);
-        var t = fmt(h) + ':' + fmt(m) + ':' + fmt(s);
-        var el1 = document.getElementById('countdown-top'); var el2 = document.getElementById('countdown-box');
-        if (el1) el1.textContent = t; if (el2) el2.textContent = t;
-      }
-      setInterval(tick, 1000); tick();
-    })();
-  </script>
+    <div class="flex items-center justify-center gap-3 text-xs text-gray-500 flex-wrap">
+      <span>&#128274; Pix &middot; Cartao</span>
+      <span>&#128241; Acesso imediato</span>
+      <span>&#9989; Garantia 7 dias</span>
+    </div>
+  </div>
+
+  <div class="bg-gray-900 rounded-xl p-4 mb-6 border border-gray-700 flex items-start gap-3">
+    <span class="text-3xl">&#128737;</span>
+    <div>
+      <p class="font-bold text-sm mb-1">Garantia Incondicional de 7 Dias</p>
+      <p class="text-xs text-gray-400">Se nao ficar satisfeito por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+    </div>
+  </div>
+</div>
+
+<div class="sbar flex items-center justify-between gap-3">
+  <div class="shrink-0">
+    <p class="text-xs text-gray-400 leading-tight">Por apenas</p>
+    <p class="text-xl font-black text-emerald-400">R$37</p>
+  </div>
+  <a href="https://pay.kiwify.com.br/TVqS0X5" class="shake flex-1 bg-emerald-500 hover:bg-emerald-400 text-black font-black py-3 px-4 rounded-xl text-sm text-center uppercase tracking-wide">
+    COMPRAR AGORA &rarr;
+  </a>
+</div>
+
+<script>
+(function(){
+  var s=600,end=Date.now()+s*1000,done=false;
+  function fmt(n){return String(n).padStart(2,'0')}
+  function tick(){
+    var r=Math.max(0,end-Date.now()),m=Math.floor(r/60000),sc=Math.floor((r%60000)/1000),t=fmt(m)+':'+fmt(sc);
+    ['ct1','ct2'].forEach(function(id){var e=document.getElementById(id);if(e)e.textContent=t});
+    if(r===0&&!done){done=true;var b=document.getElementById('topbar');if(b){b.innerHTML='<p class="text-sm font-black">OFERTA EXPIRANDO - ULTIMA CHANCE ANTES DO PRECO SUBIR</p>';}}
+  }
+  setInterval(tick,1000);tick();
+  var v=25+Math.floor(Math.random()*20),el=document.getElementById('vw');if(el)el.textContent=v;
+  setInterval(function(){v=Math.max(18,Math.min(60,v+(Math.random()>.5?1:-1)));if(el)el.textContent=v;},5000);
+})();
+</script>
 </body>
 </html>
